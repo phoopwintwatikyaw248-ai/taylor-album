@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Taylor Swift Songs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #ffd6f2, #d9f1ff);
+            text-align: center;
+        }
+
+        .top-bar {
+            background: #000;
+            color: white;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .song-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 45px;
+            padding: 30px;
+        }
+
+        .flip-card {
+            background: transparent;
+            width: 180px;
+            height: 220px;
+            perspective: 1000px;  /* Needed for 3D flip */
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .flip-card-front img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* makes circle */
+            object-fit: cover;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .flip-card-back {
+            background-color: #ffffff;
+            transform: rotateY(180deg);
+            font-size: 18px;
+            font-weight: bold;
+            color: #b30059;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            border-radius: 15px;
+        }
+
+        .page {
+            min-height: 90vh; /* pushes content up when short */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .back-button {
+            display: block;
+            /*margin: 50px auto 40px auto;
+            background: black;*/
+            color: white;
+            /*padding: 0.1px 0;*/
+            border-radius: 10px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .bottom-bar {
+            background-color: black;
+           
+            padding: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="page">
+    <div class="top-bar">My Favourite Taylor Swift Songs (推し曲)</div>
+
+    <div class="song-container">
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+
+                <div class="flip-card-front">
+                    <img src="fav/lovest.jpg" alt="Love Story">
+                </div>
+                <div class="flip-card-back">
+                    Love Story (Fearless album)<br>
+                    - Country-pop
+                </div>
+
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+
+                <div class="flip-card-front">
+                    <img src="fav/belong.jpg" alt="You belong with me">
+                </div>
+                <div class="flip-card-back">
+                    You belong with me (Fearless album)<br>
+                    - Country-pop / Pop-rock
+                </div>
+
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="fav/enchanted.jpg" alt="Enchanted">
+                </div>
+                <div class="flip-card-back">
+                    Enchanted (Speak Now album)<br>
+                    - Power-pop / pop-rock
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="fav/Everything.jpg" alt="Everything has changed">
+                </div>
+                <div class="flip-card-back">
+                    Everything has changed (Red album)<br>
+                    - Folk-pop / country-pop
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="fav/blank.jpg" alt="Blank Space">
+                </div>
+                <div class="flip-card-back">
+                    Blank Space (1989 album)<br>
+                    - Electropop
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="fav/wild.jpg" alt="Wildest dreams">
+                </div>
+                <div class="flip-card-back">
+                    Wildest dreams (1989 album)<br>
+                    - Dream-pop / synth-pop
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+
+                <div class="flip-card-front">
+                    <img src="fav/this love.jpg" alt="This love">
+                </div>
+                <div class="flip-card-back">
+                    This love (1989 album)<br>
+                    - Soft rock / dream-pop
+                </div>
+
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="fav/youare -.jpg" alt="You are in love">
+                </div>
+                <div class="flip-card-back">
+                    You are in love (1989 album)<br>
+                    - Synth-pop / dream-pop
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="fav/call.jpg" alt="Call it what you want it">
+                </div>
+                <div class="flip-card-back">
+                    Call it what you want it (Reputation album)<br>
+                    - Dreamy electropop / synth-pop
+                </div>
+            </div>
+        </div> 
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+
+                <div class="flip-card-front">
+                    <img src="fav/daylight.jpg" alt="Daylight">
+                </div>
+                <div class="flip-card-back">
+                    Daylight (Lover album)<br>
+                    - Pop / soft pop
+                </div>
+
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="fav/cardigan.jpg" alt="Cardigan">
+                </div>
+                <div class="flip-card-back">
+                    Cardigan (Folklore album)<br>
+                    - Indie-folk / alternative
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="fav/willow.jpg" alt="Willow">
+                </div>
+                <div class="flip-card-back">
+                    Willow (Folklore album)<br>
+                    - Indie-folk / alternative
+                </div>
+            </div>
+        </div>   
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="fav/exile.jpg" alt="Exile">
+                </div>
+                <div class="flip-card-back">
+                    Exile (Folklore album)<br>
+                    - Indie-folk / alternative
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="fav/august.jpg" alt="August">
+                </div>
+                <div class="flip-card-back">
+                    August (Folklore album)<br>
+                    - Indie-pop / dream-pop
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+
+                <div class="flip-card-front">
+                    <img src="fav/all too.jpg" alt="All too well">
+                </div>
+                <div class="flip-card-back">
+                    All too well (10 min version)(Red Taylor's version album)<br>
+                    - Folk-rock / country-folk
+                </div>
+
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+
+                <div class="flip-card-front">
+                    <img src="fav/You're On Your Own, Kid.jpg" alt="You are on your own kid">
+                </div>
+                <div class="flip-card-back">
+                    You are on your own kid (Midnights)<br>
+                    - Synth-pop / alternative pop
+                </div>
+
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="fav/slut.jpg" alt="Slut">
+                </div>
+                <div class="flip-card-back">
+                    Slut (1989 Taylor's version album)<br>
+                    - Dream-pop / synth-pop
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="fav/youre losing me.jpg" alt="You are losing me">
+                </div>
+                <div class="flip-card-back">
+                    You are losing me (Midnights album : The Late Night Edition)<br>
+                    - Synth-pop / emotional pop
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="fav/say don't go.jpg" alt="Say don't go">
+                </div>
+                <div class="flip-card-back">
+                    Say don't go (1989 Taylor's Version album - Vault)<br>
+                    - Synth-pop / pop
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="fav/imgonna.jpg" alt="Imgonnagetyouback">
+                </div>
+                <div class="flip-card-back">
+                    Imgonnagetyouback (The Torturted Poets Department)<br>
+                    - Electro-pop / synth-pop
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+
+                <div class="flip-card-front">
+                    <img src="fav/fort.jpg" alt="Fortnight">
+                </div>
+                <div class="flip-card-back">
+                    Fortnight (The Torturted Poets Department)<br>
+                    - Electro-pop / synth-pop
+                </div>
+
+            </div>
+        </div>        
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="fav/downbad.jpg" alt="Down bad">
+                </div>
+                <div class="flip-card-back">
+                    Down bad (The Torturted Poets Department)<br>
+                    - Synth-pop / electro-pop
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+
+                <div class="flip-card-front">
+                    <img src="fav/alchemy.jpg" alt="The alchemy">
+                </div>
+                <div class="flip-card-back">
+                    The alchemy (The Torturted Poets Department)<br>
+                    - Pop-rock / alternative pop
+                </div>
+
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="fav/myboy.jpg" alt="My boy only breaks his favourite toys">
+                </div>
+                <div class="flip-card-back">
+                    My boy only breaks his favourite toys (The Torturted Poets Department)<br>
+                    - Alternative pop / indie-pop
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="bottom-bar"><a class="back-button" href="index.html">Back to Home</a></div>
+</body>
+</html>
